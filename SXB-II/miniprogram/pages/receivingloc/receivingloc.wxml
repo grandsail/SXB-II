@@ -1,2 +1,5 @@
-<!--pages/receivingloc/receivingloc.wxml-->
-<text>pages/receivingloc/receivingloc.wxml</text>
+<view class='back'>
+<view class='box1'>1</view>
+<view class='box2'>1</view>
+</view>
+

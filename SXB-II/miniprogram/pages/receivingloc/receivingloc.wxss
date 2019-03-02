@@ -1,1 +1,22 @@
-/* pages/receivingloc/receivingloc.wxss */
+page {
+  background-color:  white;
+  justify-content: flex-start;
+  height: 100%
+}
+
+.back{
+  background: orange;
+  margin-left: 10%;
+  height: 20%;
+  width: 80%;
+}
+
+.box1{
+  background: green;
+  width: 30%;
+}
+
+.box2{
+  background:white;
+  width: 30%;
+}
