@@ -45,7 +45,7 @@ changeToRecievingloc: function() {
     url: '../recievingloc/recievingloc'
   })
 },
-//点击“常用收件地点”跳转至history页面
+//点击“预约记录”跳转至history页面
 changeTohistory: function () {
   wx.navigateTo({
     url: '../history/history'
