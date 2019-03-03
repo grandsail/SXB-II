@@ -1,0 +1,33 @@
+page{
+ background-color:  white;
+ height:100%;
+}
+.userinfo{
+ font-size:130%;
+ background-color: #F6F6F6;
+ flex-direction: row;
+ display: flex;
+ border-radius: 5%;
+}
+.picture{
+ width: 30%;
+ height: 30%;
+ border-radius: 50%;
+ margin:3%;
+ overflow:hidden;
+}
+.name{
+ width: 75%;
+ height: 25%;
+ margin:10%;
+}
+.function{
+  background-color:  white;
+}
+.first{
+ height:20%;margin:5%;
+}
+.second{
+ height:20%;
+ margin:5%;
+}
