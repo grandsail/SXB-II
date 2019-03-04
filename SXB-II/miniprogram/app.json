@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/receivingloc/receivingloc",
+    "pages/editrevloc/editrevloc",
+    "pages/addrevloc/addrevloc",
     "pages/frontpage/frontpage",
     "pages/center/center",
-    "pages/index/index",
-    "pages/receivingloc/receivingloc"
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

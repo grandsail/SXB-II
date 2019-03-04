@@ -73,3 +73,16 @@ page {
   font-size: 60%;
   color: gray;
 }
+
+.addrevloc{
+  height: 5%;
+  width: 40%;
+  background-color:#fff2cc;
+  margin-top: 5%;
+  margin-left: 30%;
+  padding: 2%;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

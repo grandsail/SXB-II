@@ -1,0 +1,13 @@
+<view class="form_item">
+  <text class='form_text'>姓名</text>
+  <input class="form_input" type="text" bindblur='UserNameInput'/>
+</view>
+<view class="form_item">
+  <text class='form_text'>电话</text>
+  <input class="form_input" type="number" bindblur='UserPhoneNumInput'/>
+</view>
+<view class="form_item">
+  <text class='form_text'>地址</text>
+  <input class="form_input" type="text" bindblur='UserAddressInput'/>
+</view>
+<view class='button' bindtap="SaveAdd" >保存</view>
