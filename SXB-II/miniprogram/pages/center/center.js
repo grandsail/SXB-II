@@ -1,36 +1,4 @@
 Page({
-  
-
-  onReady: function () {
-
-  },
-
-  onShow: function () {
-
-  },
-
-  onHide: function () {
-
-  },
-
-  onUnload: function () {
-
-  },
-
-  
-
-  onReachBottom: function () {
-
-  },
-
-  onShareAppMessage: function () {
-
-  },
-
- 
- 
-
-
 
 //点击头像跳转至userinfo页面
 changeToUserinfo: function () {
@@ -39,10 +7,10 @@ changeToUserinfo: function () {
   })
 },
 
-//点击“常用收件地点”跳转至recievingloc页面
-changeToRecievingloc: function() {
+//点击“常用收件地点”跳转至receivingloc页面
+changeToReceivingloc: function() {
   wx.navigateTo({
-    url: '../recievingloc/recievingloc'
+    url: '../receivingloc/receivingloc'
   })
 },
 //点击“预约记录”跳转至history页面

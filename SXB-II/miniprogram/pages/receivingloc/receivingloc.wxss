@@ -1,1 +1,75 @@
-/* pages/receivingloc/receivingloc.wxss */
+page {
+  background-color:  white;
+  justify-content: flex-start;
+  height: 100%
+}
+
+.LocItem{
+  width: 80%;
+  height: 18%;
+  background-color:rgba(211, 211, 211, 0.397);
+  border-radius: 5%;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top:1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.DefaultLocItem{
+  width: 80%;
+  height: 18%;
+  background-color:#fff2cc;
+  border-radius: 5%;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top:1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.info{
+  width: 60%;
+  height: 20%;
+  margin-bottom: 4%;
+  padding-left: 5%; 
+}
+
+.logodefault{
+  height: 27%;
+  width: 80%;
+  float: right;
+  margin-left: 30%;
+  margin-top: 100%;
+}
+
+.logoitem{
+  height: 100%;
+  width: 80%;
+  float: right;
+  margin-left: 30%;
+  margin-top: 130%;
+}
+
+.edit_image{
+  height: 70%;
+  width: 50%;
+}
+
+.leftbox{
+  width: 80%;
+}
+
+.rightbox{
+  width: 20%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.defaulttext{
+  font-size: 60%;
+  color: gray;
+}

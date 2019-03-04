@@ -1,0 +1,9 @@
+page {
+  background-color:  white;
+  justify-content: flex-start;
+  height: 100%
+}
+
+.temp{
+  margin: 5%;
+}
