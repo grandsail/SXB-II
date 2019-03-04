@@ -4,6 +4,7 @@ Page({
     reg_name: '',
     reg_phonenum:'',
     reg_address:'',
+    reg_isdefault:0,
   },
 
   UserNameInput: function (e) {
@@ -15,6 +16,14 @@ Page({
   UserPhoneNumInput: function (e) {
     this.setData({
       reg_phonenum: e.detail.value
+    })
+  },
+
+  SwitchChange : function(){
+    var SwitchState=this.data.reg_isdefault;
+    SwitchState = (SwitchState + 1) % 2;
+    this.setData({
+      reg_isdefault : SwitchState,
     })
   },
 
@@ -31,7 +40,7 @@ Page({
         name: this.data.reg_name,
         phonenum: this.data.reg_phonenum,
         address: this.data.reg_address,
-        isdefault:0 //需要更多函数
+        isdefault:this.data.reg_isdefault,
       },
       success: res => {
         console.log('新增收件地址成功，记录 _id: ', res._id)
