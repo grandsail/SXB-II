@@ -86,5 +86,24 @@ Page({
         complete: function (res) { },
       })
     }
+  },
+
+  EditRevLoc: function () {
+    if (this.data.hasDefault == 1) {
+      wx.navigateTo({
+        url: '../editrevloc/editrevloc?DefaultExist=1&id=' + this.data.reg_IsDefaultId,
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+    else {
+      wx.navigateTo({
+        url: '../editrevloc/editrevloc?DefaultExist=0',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
   }
 })
