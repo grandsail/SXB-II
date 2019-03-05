@@ -1,6 +1,6 @@
 <!--默认收件地址部分-->
 <block wx:for="{{RevInfos}}">
-  <view wx:if="{{item.isdefault==1}}" class='DefaultLocItem' bindtap='EditRevLoc'>
+  <view wx:if="{{item.isdefault==1}}" class='DefaultLocItem' bindtap='EditRevLoc' data-id='{{item._id}}'>
       <view class='leftbox'>
         <view class='info'>{{item.name}}</view>
         <view class='info'>{{item.phonenum}}</view>
@@ -16,7 +16,7 @@
 </block>
 <!--其他收件地址部分-->
 <block wx:for="{{RevInfos}}">
-  <view wx:if="{{item.isdefault==0}}" class='LocItem'  bindtap='EditRevLoc'>
+  <view wx:if="{{item.isdefault==0}}" class='LocItem'  bindtap='EditRevLoc' data-id='{{item._id}}'>
       <view class='leftbox'>
         <view class='info'>{{item.name}}</view>
         <view class='info'>{{item.phonenum}}</view>
