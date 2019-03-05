@@ -4,6 +4,3 @@ page {
   height: 100%
 }
 
-.temp{
-  margin: 5%;
-}

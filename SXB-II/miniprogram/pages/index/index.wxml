@@ -1,2 +1,1 @@
-<button class='temp' bindtap='ToReceivingloc'>常用收件地址</button>
 <text>Hello!</text>
