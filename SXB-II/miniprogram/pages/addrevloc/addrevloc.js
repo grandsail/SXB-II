@@ -5,6 +5,26 @@ Page({
     reg_phonenum:'',
     reg_address:'',
     reg_isdefault:0,
+    hasDefault:0,
+    reg_toChangeId:''
+  },
+
+
+  onLoad: function (option) {
+    //console.log(option.DefaultExist);
+    var temp = option.DefaultExist;
+    var id=option.id;
+    //console.log(temp);
+    //console.log(option.id);
+    this.setData({
+      hasDefault:temp
+    })
+    if(this.data.hasDefault==1)
+    {
+      this.setData({
+        reg_toChangeId: id
+      })
+    }
   },
 
   UserNameInput: function (e) {
@@ -33,7 +53,24 @@ Page({
     })
   },
 
-  SaveAdd: function (e) {
+  SaveAdd: function(){
+    this.ChangeDefault(),
+    this.AddLoc()
+  },
+
+  ChangeDefault: function(e){
+    if(this.data.hasDefault==1)
+    {
+      const db = wx.cloud.database()
+      db.collection('ReceivingLoc').doc(this.data.reg_toChangeId).update({
+        data: {
+          isdefault: 0
+        }
+      })
+    }
+  },
+
+  AddLoc: function (e) {
     const db = wx.cloud.database()
     db.collection('ReceivingLoc').add({
       data: {
