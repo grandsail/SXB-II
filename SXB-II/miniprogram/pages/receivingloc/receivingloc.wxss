@@ -4,10 +4,10 @@ page {
   height: 100%
 }
 
-.LocItem{
+.DefaultLocItem{
   width: 80%;
   height: 18%;
-  background-color:rgba(211, 211, 211, 0.397);
+  background-color:#fff2cc;
   border-radius: 5%;
   margin-top: 3%;
   margin-left: 10%;
@@ -17,10 +17,10 @@ page {
   flex-direction: row;
 }
 
-.DefaultLocItem{
+.LocItem{
   width: 80%;
   height: 18%;
-  background-color:#fff2cc;
+  background-color:rgba(211, 211, 211, 0.397);
   border-radius: 5%;
   margin-top: 3%;
   margin-left: 10%;
