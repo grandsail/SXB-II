@@ -15,6 +15,7 @@ Page({
       clickId:id  //记录带参跳转的参数，该参数为用户点击的收件地址条目的_id
     })
     this.PrepareInfo()  //查询该id的信息
+    this.FindDefault()  //获取defaultId
   },
 
   PrepareInfo: function(){
@@ -80,10 +81,11 @@ Page({
 
   ChangeDefault: function (e) {
     //处理已有默认收件地址
-    if(defaultId!=clickId)
+    if ((this.data.defaultId != this.data.clickId)&&(this.data.reg_isdefault==1))
     {
+      console.log(this.data.defaultId)
       const db = wx.cloud.database()
-      db.collection('ReceivingLoc').doc(defaultId).update({
+      db.collection('ReceivingLoc').doc(this.data.defaultId).update({
         data: {
           isdefault: 0
         }
@@ -94,13 +96,13 @@ Page({
   EditLoc: function (e) {
     //根据用户输入信息修改数据库中条目
     const db = wx.cloud.database()
-    db.collection('ReceivingLoc').doc(clickId).update({
+    db.collection('ReceivingLoc').doc(this.data.clickId).update({
       data: {
         //修改数据库中特定条目的信息
-        isdefault: reg_isdefault,
-        name: reg_name,
-        address: reg_address,
-        phonenum: reg_phonenum
+        isdefault: this.data.reg_isdefault,
+        name: this.data.reg_name,
+        address: this.data.reg_address,
+        phonenum: this.data.reg_phonenum
       },
       success: res => {
         console.log('修改地址信息成功，记录 _id: ', res._id)
