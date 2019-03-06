@@ -1,77 +1,63 @@
-.container{
-    background:#fff
+page{
+ background-color:  white;
+ height:100%;
 }
 
 .postNumInput{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    margin:8%;
-    font-size: 88%;
-    font-weight: 600;
-    line-height: 172%;
-     color: #000;
-    margin-top: 14%;}
-
-
-
-.recTimeSelect text{
-    
-   font-size: 88%;
-    color: #000;
-    float:left;
-     font-weight: 600;
-     margin-left:8%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 8%;
+  font-size: 140%;
+  font-weight: 800;
+  color: #000;
+  text-align:center;
+  margin-top: 14%;
 }
 
-
-.picker{
-    padding: 10%;
-    background-color: #FFFFFF;}
-
-
-.dateSelect{
-   
-    border:1px solid #ddd;
-border-radius:8rpx;
-border-width: 50%;
-float:left;
-margin-left: 2%;
-}
-.timeSelect{
-  
-    border:1px solid #ddd;
-border-radius:8rpx;
-border-width: 50%;
-float:right;
-margin-right: 17%;
-}
-
-
-
-
-.placeholder_style{
-    font-family:'微软雅黑';
-    color:darkgray;
-    margin-left: 4%;
-
-}
-
-
-.postNumInput input{
+.userNumInput{
   border:1px solid #ddd;
-border-radius:8rpx;
-
-
+  border-radius:8rpx;
+  margin-left: 5%;
+  font-weight: 300;
+  font-family:'微软雅黑';
+  font-size: 85%;
+  color:darkgray;
+  
 }
 
-page {
-  background-color:  white;
-  justify-content: flex-start;
-  height: 100%
+
+
+
+
+.recTimeSelect{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
 }
 
+.Text{
+  margin-left: 4%;
+  font-size: 140%;
+  font-weight: 800;
+  color: #000;
+}
 
+.Picker1{
+  text-align:center;
+  width: 30%;
+  border:1rpx solid #ddd;
+  border-radius:8rpx;
+  background-color: white;
+  margin-left:3%; 
+}
+.Picker2{
+  text-align:center;
+  width: 20%;
+  border:1rpx solid #ddd;
+  border-radius:8rpx;
+  background-color: white;
+  margin-left:5%; 
+}
 
 
 .name{
