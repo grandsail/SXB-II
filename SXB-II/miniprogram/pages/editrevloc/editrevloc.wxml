@@ -16,4 +16,4 @@
   <view class='switchtext'>设为默认:</view>
   <switch bindchange='SwitchChange' checked='{{reg_isdefault}}'></switch>
 </view>
-<view class='button' bindtap="SaveAdd" >保存</view>
+<view class='button' bindtap="SaveEdit" >保存</view>
