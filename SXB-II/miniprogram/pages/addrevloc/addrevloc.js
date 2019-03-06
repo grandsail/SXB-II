@@ -62,7 +62,7 @@ Page({
 
   ChangeDefault: function(e){
     //处理原有默认收件地址
-    if(this.data.hasDefault==1&&reg_isdefault==1)
+    if(this.data.hasDefault==1&&this.data.reg_isdefault==1)
     { //若已存在默认收件地址且要新增添收件地址则将原来的收件地址默认设为否
       const db = wx.cloud.database()
       db.collection('ReceivingLoc').doc(this.data.reg_toChangeId).update({
