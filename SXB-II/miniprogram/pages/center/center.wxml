@@ -1,8 +1,10 @@
   <!-- 个人中心页面 王静缘-->
   <view class='userinfo'>
+  
+ 
      <!-- 头像-->
-     <view class='picture'  bindtap='changeToUserinfo'>
-       <open-data type="userAvatarUrl" ></open-data>
+     <view class='picture'  >
+       <open-data  type="userAvatarUrl" ></open-data>
      </view>
      <!-- 昵称--> 
      <view class='name'>
@@ -14,13 +16,18 @@
  
     <view class='first'  bindtap='changeToReceivingloc'>
      <image src="../source/adress.png" class='fonctionPicture1' ></image>  
-     <text style='font-size:110%;margin-top:3%;'>常用收件地点       ></text>
+     <text style='font-size:110%;margin-top:3%;'>收件地址       ></text>
    </view>
   
   
    <view class='second' bindtap='changeTohistory'>
    <image src="../source/record.png" class='fonctionPicture2' ></image>  
-   <text style='font-size:110%;margin-top:3%;'>我的预约记录       ></text>
+   <text style='font-size:110%;margin-top:3%;'>预约记录       ></text>
+   </view>
+
+   <view class='third' bindtap='changeTohistory'>
+   <image src="../source/ear.png" class='fonctionPicture3' ></image>  
+   <text style='font-size:110%;margin-top:3%;'>联系客服       ></text>
    </view>
   
 
