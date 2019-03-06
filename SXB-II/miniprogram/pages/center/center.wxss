@@ -21,13 +21,32 @@ page{
  height: 25%;
  margin:10%;
 }
-.function{
-  background-color:  white;
-}
+
 .first{
- height:20%;margin:5%;
+  display: flex;
+  height: 9%;
+  margin-top: 5%;
+  background-color:  #F6F6F6;
+  
 }
+
 .second{
- height:20%;
- margin:5%;
+ display: flex;
+  height: 9%;
+  margin-top: 5%;
+  background-color:  #F6F6F6;
+
+  
+}
+.fonctionPicture1{
+  margin-right: 30%;
+  height: auto;
+  width: 15%;
+   margin-left:5%;
+}
+.fonctionPicture2{
+  margin-right: 30%;
+  height: auto;
+  width: 15%;
+    margin-left:5%;
 }

@@ -11,9 +11,17 @@
     </view>  
 
     <!--功能键-->
-  <view class='function'>
-   <button class='first' bindtap='changeToReceivingloc'>常用收件地点</button>
-   <button class='second' bindtap='changeTohistory'>预约记录</button>
-  </view>
+ 
+    <view class='first'  bindtap='changeToReceivingloc'>
+     <image src="../source/adress.png" class='fonctionPicture1' ></image>  
+     <text style='font-size:110%;margin-top:3%;'>常用收件地点       ></text>
+   </view>
+  
+  
+   <view class='second' bindtap='changeTohistory'>
+   <image src="../source/record.png" class='fonctionPicture2' ></image>  
+   <text style='font-size:110%;margin-top:3%;'>我的预约记录       ></text>
+   </view>
+  
 
 
