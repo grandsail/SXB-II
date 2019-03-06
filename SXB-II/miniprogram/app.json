@@ -1,10 +1,9 @@
 {
 
     "pages": [
-     
-
+  
     "pages/frontpage/frontpage",
-    "pages/book/book",
+  "pages/book/book",
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",
     "pages/editrevloc/editrevloc",

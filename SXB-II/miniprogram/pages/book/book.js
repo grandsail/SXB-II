@@ -153,75 +153,7 @@ Page({
     })
 
   },
-
-
-
-
-
-
-  //新增常用收件地址
-  addRecievingLoc(e) {
-    var a = this.data.IsAdd;
-    a = (a + 1) % 2;
-    this.setData({
-      IsAdd: a
-    })
-  },
-
-  //新增常用收件地址下的新增收件人信息
-  userPhoneNumInput: function (e) {
-    this.setData({
-      phoneNum: e.detail.value
-    })
-  },
-
-  userNameInput: function (e) {
-    this.setData({
-      userName: e.detail.value
-    })
-  },
-
-  userAddressInput: function (e) {
-    this.setData({
-      userAddress: e.detail.value
-    })
-  },
-
-  cancel() {
-    this.setData({
-      IsAdd: 0,
-      IsEdit: 0,
-    })
-  },
-
-
-  saveAdd: function (e) {
-    const db = wx.cloud.database()
-    db.collection('ReceivingLoc').add({
-      data: {
-        name: this.data.userName,
-        phonenum: this.data.phoneNum,
-        address: this.data.userAddress
-      },
-      success: res => {
-        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
-        this.setData({
-          userName: '',
-          phoneNum: '',
-          userAddress: '',
-        })
-      },
-      fail: err => {
-        console.error('[数据库] [新增记录] 失败：', err)
-      }
-    })
-
-    this.setData({
-      IsEdit: 0,
-      IsAdd: 1
-    })
-  },
-
+//保存编辑
   saveEdit: function (e) {
     const db = wx.cloud.database()
     db.collection('recievingloc').doc(this.data.reg_id).remove({})
@@ -252,8 +184,14 @@ Page({
       IsAdd: 0
     })
   },
-
-
+  //取消编辑
+  cancel() {
+    this.setData({
+      IsAdd: 0,
+      IsEdit: 0,
+    })
+  },
+//跳转至更多
 toReceivingLoc:function(){
   wx.navigateTo({
     url: '../receivingloc/receivingloc',

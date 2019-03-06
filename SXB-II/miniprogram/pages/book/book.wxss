@@ -201,4 +201,5 @@ border-radius: 5%;
   margin-top:3%;
  font-weight: 600;
   font-size: 88%;
+  margin-bottom: -8%;
 }

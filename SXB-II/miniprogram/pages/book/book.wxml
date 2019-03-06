@@ -59,6 +59,9 @@
 
 <view class="more" bindtap='toReceivingLoc'>更多地址</view>
 
+<view class="form_blank">
+</view>
+
 <block wx:if="{{IsEdit==1||IsAdd==1}}">
   <view class="form_item">
     <text class='form_text'>姓名</text>
