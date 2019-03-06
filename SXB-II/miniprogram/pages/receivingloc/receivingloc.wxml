@@ -1,2 +1,33 @@
-<!--pages/receivingloc/receivingloc.wxml-->
-<text>pages/receivingloc/receivingloc.wxml</text>
+<!--默认收件地址部分-->
+<block wx:for="{{RevInfos}}">
+  <view wx:if="{{item.isdefault==1}}" class='DefaultLocItem' bindtap='EditRevLoc' data-id='{{item._id}}'>
+      <view class='leftbox'>
+        <view class='info'>{{item.name}}</view>
+        <view class='info'>{{item.phonenum}}</view>
+       <view class='info'>{{item.address}}</view>
+      </view>
+      <view class='rightbox'>
+        <view class='defaulttext'>默认地址</view>
+        <view class='logodefault'>
+          <image class='edit_image' src='../source/edit_receivingloc.png'></image>
+        </view>
+      </view>
+  </view>
+</block>
+<!--其他收件地址部分-->
+<block wx:for="{{RevInfos}}">
+  <view wx:if="{{item.isdefault==0}}" class='LocItem'  bindtap='EditRevLoc' data-id='{{item._id}}'>
+      <view class='leftbox'>
+        <view class='info'>{{item.name}}</view>
+        <view class='info'>{{item.phonenum}}</view>
+       <view class='info'>{{item.address}}</view>
+      </view>
+      <view class='rightbox'>
+        <view class='logoitem'>
+          <image class='edit_image' src='../source/edit_receivingloc.png'></image>
+        </view>
+      </view>
+  </view>
+</block>
+<!--添加收件地址-->
+<view class='addrevloc' bindtap='AddRevLoc'>添加收件地址</view>

@@ -1,0 +1,19 @@
+  <!-- 个人中心页面 王静缘-->
+  <view class='userinfo'>
+     <!-- 头像-->
+     <view class='picture'  bindtap='changeToUserinfo'>
+       <open-data type="userAvatarUrl" ></open-data>
+     </view>
+     <!-- 昵称--> 
+     <view class='name'>
+       <open-data type="userNickName" ></open-data>
+     </view>
+    </view>  
+
+    <!--功能键-->
+  <view class='function'>
+   <button class='first' bindtap='changeToReceivingloc'>常用收件地点</button>
+   <button class='second' bindtap='changeTohistory'>预约记录</button>
+  </view>
+
+

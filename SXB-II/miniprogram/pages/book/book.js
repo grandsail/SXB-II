@@ -67,7 +67,7 @@ Page({
   //刷新数据，访问数据库，寻找与本机_openid相同的收件地点记录，存储在canUseAddr数组内
   refreshData: function () {
     const db = wx.cloud.database()
-    db.collection('recievingloc').where({
+    db.collection('ReceivingLoc').where({
       _openid: this.data.openid
 
     }).
@@ -197,7 +197,7 @@ Page({
 
   saveAdd: function (e) {
     const db = wx.cloud.database()
-    db.collection('recievingloc').add({
+    db.collection('ReceivingLoc').add({
       data: {
         name: this.data.userName,
         phonenum: this.data.phoneNum,
@@ -253,6 +253,16 @@ Page({
     })
   },
 
+
+toReceivingLoc:function(){
+  wx.navigateTo({
+    url: '../receivingloc/receivingloc',
+    success: function(res) {},
+    fail: function(res) {},
+    complete: function(res) {},
+  })
+
+},
 
   //编辑常用收件地址
   editAddr(e) {

@@ -1,0 +1,6 @@
+page {
+  background-color:  white;
+  justify-content: flex-start;
+  height: 100%
+}
+

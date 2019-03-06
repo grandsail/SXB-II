@@ -53,9 +53,11 @@
    </view></block>
   </block>
 </block>
-<view wx:if="{{IsEdit==0&&IsAdd==0}}" bindtap='addRecievingLoc' class='add' >
+<view wx:if="{{index==0}}" bindtap='addRecievingLoc' class='add' >
     <image class='add_image' src='../source/plus_receivingloc.png'></image>
 </view>
+
+<view class="more" bindtap='toReceivingLoc'>更多地址</view>
 
 <block wx:if="{{IsEdit==1||IsAdd==1}}">
   <view class="form_item">

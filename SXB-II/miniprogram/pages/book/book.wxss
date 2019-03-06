@@ -194,3 +194,11 @@ border-radius: 5%;
 .recTimeSelect{
   margin-bottom:24%;
 }
+.more{
+  color: rgb(97, 91, 91);
+  float:right;
+  margin-right: 10%;
+  margin-top:3%;
+ font-weight: 600;
+  font-size: 88%;
+}
