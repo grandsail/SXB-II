@@ -1,33 +1,46 @@
+
 page {
-  background-color:  white;
-  justify-content: flex-start;
-  height: 100%
+background-color:#F6F6F6;
+justify-content: flex-start;
+height: 100%
+}
+.content{
+text-align: center;
+position:fixed; 
+height:7%;
+width: 100%;
+background-color: white;
+padding-top: 3%;
+
+}
+.background {
+margin-top: 13%;
+width: 100%;
+height:1.5%;
+background-size:100% 100%;
+
+position:fixed; 
 }
 
 .DefaultLocItem{
-  width: 80%;
-  height: 18%;
-  background-color:#fff2cc;
-  border-radius: 5%;
-  margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top:1%;
-  display: flex;
-  flex-direction: row;
+ width:100%;
+height: 18%;
+border-bottom-style: dotted ;
+border-bottom-color: white;
+display: flex;
+flex-direction: row;
+padding-top: 20%;
 }
 
 .LocItem{
-  width: 80%;
-  height: 18%;
-  background-color:rgba(211, 211, 211, 0.397);
-  border-radius: 5%;
-  margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top:1%;
-  display: flex;
-  flex-direction: row;
+ width:100%;
+height: 18%;
+border-bottom-style: dotted ;
+border-bottom-color: white;
+margin-top:4%; 
+display: flex;
+flex-direction: row;
+
 }
 
 .info{
@@ -36,34 +49,40 @@ page {
   margin-bottom: 4%;
   padding-left: 5%; 
 }
-
 .logodefault{
-  height: 27%;
-  width: 80%;
+  height: 70%;
+  width: 75%;
   float: right;
   margin-left: 30%;
-  margin-top: 100%;
+ 
 }
+
 
 .logoitem{
-  height: 100%;
+    height: 100%;
   width: 80%;
   float: right;
   margin-left: 30%;
-  margin-top: 130%;
+  
+  margin-top: 90%;
 }
-
 .edit_image{
-  height: 70%;
-  width: 50%;
+height: 75%;
+width: 55%;
+}
+.edit_image1{
+height: 38%;
+width: 57%;
+margin-top:50%;
 }
 
 .leftbox{
-  width: 80%;
+  width: 75%;
+  margin-left: 5%;
 }
 
 .rightbox{
-  width: 20%;
+  width:20%;
   float: right;
   display: flex;
   flex-direction: column;
@@ -77,7 +96,7 @@ page {
 .addrevloc{
   height: 5%;
   width: 40%;
-  background-color:#fff2cc;
+  background-color:white;
   margin-top: 5%;
   margin-bottom: 10%;
   margin-left: 30%;

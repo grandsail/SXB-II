@@ -1,7 +1,7 @@
 {
   
     "pages": [
-      "pages/center/center",
+    "pages/center/center",
     "pages/frontpage/frontpage",
     "pages/book/book",
     "pages/receivingloc/receivingloc",
