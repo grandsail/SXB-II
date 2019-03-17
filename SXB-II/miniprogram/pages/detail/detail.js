@@ -5,7 +5,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  this.data.id=options.id;
+    this.data.id = options.id;
     this.onQuery()
   },
 
@@ -14,7 +14,7 @@ Page({
     inputValue: '',
     queryResult: '',
     count: 0,
-    id:'',
+    id: '',
   },
   //查找
   onQuery: function () {
@@ -39,11 +39,12 @@ Page({
     })
   },
   //更改
-   onUpdate: function (e) {
+  onUpdate: function (e) {
     let id = e.currentTarget.dataset.id
     const db = wx.cloud.database()
     wx.navigateTo({
-      url: '../change/change?id=' + this.data.id+'&date='+this.data.queryResult[0].date+'&time='+this.data.queryResult[0].time+'&postnum='+this.data.queryResult[0].postnum  })
+      url: '../change/change?id=' + this.data.id + '&date=' + this.data.queryResult[0].date + '&time=' + this.data.queryResult[0].time + '&postnum=' + this.data.queryResult[0].postnum
+    })
   },
   //删除
   onRemove: function (e) {
