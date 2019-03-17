@@ -1,7 +1,7 @@
 <!--输入单号-->
 <view class="postNumInput">
         <text >单号:</text>
-     <input type="number" placeholder="请输入快递单号 " placeholder-class="placeholder_style" name="data_num" value="{{data_num}}" focus="{{focus}}" bindinput='confirm' bindblur='userNumInput'/>
+     <input type="number" placeholder="请输入快递单号 " placeholder-class="placeholder_style"  value="{{num}}" focus="{{focus}}" bindinput='confirm' bindblur='userNumInput'/>
    </view>
 
 <!--选择时间-->
@@ -29,10 +29,38 @@
 
 <!--收件地址-->
 
+
 <view class="recAddr"><text>收件地址</text></view>
+
+ 
+ <block wx:if="{{canUseAddr.length===0}}">
+ <view class='addLoc' bindtap="editAddr">创建地址</view>
+</block>
+
+
+
+ <block wx:for="{{canUseAddr}}"  wx:for-index="index" >
+<block wx:if="{{more==0&&index==0&&select==0}}">
+    <view class='locItemSelect'   bindtap='addrSelect' id="{{index}}" > 
+    
+        <view class='name'>{{item.name}}</view>
+        <view class='phonenum'>{{item.phonenum}}</view>
+        <view class='address'>地址：{{item.address}}</view>
+        <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
+   </view></block>
+ <block wx:if="{{more==0&&index==0&&select==0}}" >
+<view class="more" bindtap='moreRecLoc'>更多地址</view>
+</block>
+ 
+</block>
+   
+   
+
+ 
+ 
  <block wx:for="{{canUseAddr}}"  wx:for-index="index" >
 
-  <block wx:if="{{index==clickId}}" >
+  <block wx:if="{{more==1}}" >
 <view class='locItemSelect' bindtap='addrSelect' id="{{index}}" data-id='{{item._id}}' > 
        <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
@@ -41,23 +69,27 @@
         </view>
   
    </block>
+   
+ 
+   </block>
 
-<block wx:else>
-<block wx:if="{{index<3}}">
-    <view class='locItemUnselect'   bindtap='addrSelect' id="{{index}}" > 
+
+
+
+<block wx:for="{{canUseAddr}}"  wx:for-index="index"  >
+<block wx:if="{{select==1&&index==clickId&&more==0}}">
+   <view class='locItemSelect'   bindtap='addrSelect'  > 
     
         <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
         <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
-   </view></block>
-  </block>
+   </view>
+   <view class="more" bindtap='moreRecLoc'>更多地址</view>
+   </block>
+ 
 </block>
-<view wx:if="{{index==0}}" bindtap='addRecievingLoc' class='add' >
-    <image class='add_image' src='../source/plus_receivingloc.png'></image>
-</view>
 
-<view class="more" bindtap='toReceivingLoc'>更多地址</view>
 
 <view class="form_blank">
 </view>

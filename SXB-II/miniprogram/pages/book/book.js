@@ -5,7 +5,6 @@ Page({
   {
     date: '2018-09-01',
     time: '12:00',
-    num: '',
     phonenum: '',
     name: '',
     address: '',
@@ -13,15 +12,16 @@ Page({
     car: '',
     box: '',
     back: '',
-    canUseAddr: '',
+    canUseAddr:'',
     IsAdd: 0,
     IsEdit: 0,
-    select: false,
     clickId: 0,
     reg_name: '',
     reg_phonenum: '',
     reg_address: '',
-    reg_id: ''
+    reg_id: '',
+    more:0,
+    select:1
   },
 
 
@@ -49,16 +49,26 @@ Page({
     })
   },
 
-  //是否选择地址判断
+  //是否选择地址判断,需要改成只要more=1时select=0
   addrSelect: function (res) {
-    var select = this.data.boolean;
+    
+    var d=this.data.select;
+    d=(d+1)%2;
     this.setData({
-
-      select: !select
+      select:d
     })
+    var b = this.data.more;
+    b = (b + 1) % 2;
+
+    this.setData({
+      more: b
+    })
+   
     console.log(res)
     this.setData({
-      clickId: res.currentTarget.id
+      clickId: res.currentTarget.id,
+      select:d
+
     })
   },
 
@@ -192,14 +202,18 @@ Page({
     })
   },
 //跳转至更多
-toReceivingLoc:function(){
-  wx.navigateTo({
-    url: '../receivingloc/receivingloc',
-    success: function(res) {},
-    fail: function(res) {},
-    complete: function(res) {},
-  })
+moreRecLoc:function(){
+ var b=this.data.more;
+ b=(b+1)%2;
 
+ this.setData({more:b
+ })
+
+  var d = this.data.select;
+  d = (d + 1) % 2;
+  this.setData({
+    select: d
+  })
 },
 
   //编辑常用收件地址
