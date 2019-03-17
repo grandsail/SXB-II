@@ -1,30 +1,36 @@
+
+<!--顶部装饰部分-->
+<view class="content"> 收件地址 
+</view>
+<image class='background' src="../source/paper.png" mode="aspectFill"></image>
 <!--默认收件地址部分-->
 <block wx:for="{{RevInfos}}">
-  <view wx:if="{{item.isdefault==1}}" class='DefaultLocItem' bindtap='EditRevLoc' data-id='{{item._id}}'>
+  <view wx:if="{{item.isdefault==1}}" class='DefaultLocItem'  >
       <view class='leftbox'>
         <view class='info'>{{item.name}}</view>
-        <view class='info'>{{item.phonenum}}</view>
-       <view class='info'>{{item.address}}</view>
+        <view class='info'>电话:{{item.phonenum}}</view>
+        <view class='info'>地址：{{item.address}}</view>
       </view>
       <view class='rightbox'>
         <view class='defaulttext'>默认地址</view>
         <view class='logodefault'>
-          <image class='edit_image' src='../source/edit_receivingloc.png'></image>
+          <image class='edit_image1' bindtap='EditRevLoc'  data-id='{{item._id}}'                     src="../source/pencil.png"></image>
         </view>
       </view>
   </view>
 </block>
 <!--其他收件地址部分-->
 <block wx:for="{{RevInfos}}">
-  <view wx:if="{{item.isdefault==0}}" class='LocItem'  bindtap='EditRevLoc' data-id='{{item._id}}'>
+  <view wx:if="{{item.isdefault==0}}" class='LocItem' >
       <view class='leftbox'>
         <view class='info'>{{item.name}}</view>
-        <view class='info'>{{item.phonenum}}</view>
-       <view class='info'>{{item.address}}</view>
+        <view class='info'>电话:{{item.phonenum}}</view>
+        <view class='info'>地址：{{item.address}}</view>
+        
       </view>
       <view class='rightbox'>
         <view class='logoitem'>
-          <image class='edit_image' src='../source/edit_receivingloc.png'></image>
+          <image class='edit_image' bindtap='EditRevLoc'  data-id='{{item._id}}'                     src="../source/pencil.png"></image>
         </view>
       </view>
   </view>
