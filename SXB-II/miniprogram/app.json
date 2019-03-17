@@ -1,26 +1,21 @@
 {
   
     "pages": [
+    "pages/book/book",
     "pages/center/center",
     "pages/frontpage/frontpage",
-<<<<<<< HEAD
-    
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",
     "pages/editrevloc/editrevloc",
-    "pages/center/center",
+ 
     "pages/index/index",
     "pages/detail/detail",
     "pages/history/history",
     "pages/change/change"
-=======
-    "pages/book/book",
-    "pages/receivingloc/receivingloc",
-    "pages/addrevloc/addrevloc",
-    "pages/editrevloc/editrevloc",
     
-    "pages/index/index"
->>>>>>> origin/TanZi1
+ 
+  
+ 
     ],
 
   "window": {
