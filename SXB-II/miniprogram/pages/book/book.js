@@ -26,9 +26,9 @@ Page({
 
 
   onPullDownRefresh: function () {
-    //下拉刷新订单
-    this.refreshData()
-    wx.stopPullDownRefresh()
+    //下拉刷新，与onload中行为相同
+    this.RefreshData(),
+      this.FindDefault()
   },
   onLoad: function (options) {
     // 获取初始订单信息
@@ -46,6 +46,30 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       time: e.detail.value
+    })
+  },
+
+
+
+
+  userNameInput: function (e) {
+    //获取用户填入的姓名
+    this.setData({
+      reg_name: e.detail.value
+    })
+  },
+
+  userPhoneNumInput: function (e) {
+    //获取用户填入的手机号
+    this.setData({
+      reg_phonenum: e.detail.value
+    })
+  },
+
+  userAddressInput: function (e) {
+    //获取用户填入的地址
+    this.setData({
+      reg_address: e.detail.value
     })
   },
 
@@ -163,16 +187,24 @@ Page({
     })
 
   },
+
+
 //保存编辑
   saveEdit: function (e) {
+   
+     this.setData({
+      name:this.data.reg_name,
+      phonenum:this.data.reg_phonenum,
+      address:this.data.reg_address
+    })
     const db = wx.cloud.database()
-    db.collection('recievingloc').doc(this.data.reg_id).remove({})
-    db.collection('recievingloc').add({
+    db.collection('ReceivingLoc').doc(this.data._id).update({
       data: {
-        name: this.data.reg_name,
-        phonenum: this.data.reg_phonenum,
-        address: this.data.reg_address
-      },
+        name: this.data.name,
+        phonenum: this.data.honenum,
+        address: this.data.address
+      }
+      ,
       success: res => {
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
         this.setData({
@@ -181,7 +213,7 @@ Page({
           reg_address: '',
           reg_id: '',
         })
-
+      
 
 
       },
@@ -190,10 +222,12 @@ Page({
       }
     })
     this.setData({
-      IsEdit: 1,
+      IsEdit: 0,
       IsAdd: 0
     })
   },
+
+  
   //取消编辑
   cancel() {
     this.setData({
@@ -216,17 +250,40 @@ moreRecLoc:function(){
   })
 },
 
+
+
+
   //编辑常用收件地址
   editAddr(e) {
     const db = wx.cloud.database()
     //db.collection('recievingloc').doc(id).remove({
     // success: res => {
+
+   if(this.data.canUseAddr!=='')
     this.setData({
       reg_name: this.data.canUseAddr[this.data.clickId].name,
       reg_address: this.data.canUseAddr[this.data.clickId].address,
       reg_phonenum: this.data.canUseAddr[this.data.clickId].phonenum,
       reg_id: this.data.canUseAddr[this.data.clickId].id
     })
+    var a = this.data.IsEdit;
+    a = (a + 1) % 2;
+
+    this.setData({
+      IsEdit: a
+    })
+  },
+  
+  addAddr(e) {
+    
+    var a = this.data.IsAdd;
+    a = (a + 1) % 2;
+
+    this.setData({
+      IsAdd: a
+    })
+  
+    
     var a = this.data.IsAdd;
     a = (a + 1) % 2;
 
@@ -234,4 +291,42 @@ moreRecLoc:function(){
       IsEdit: a
     })
   }
+
+ ,
+  saveAdd: function (e) {
+    const db = wx.cloud.database()
+    this.setData({
+      name:this.data.reg_name,
+      phonenum:this.data.reg_phonenum,
+      address:this.data.reg_address
+    })
+    db.collection('ReceivingLoc').add({
+   data:{
+        name: this.data.name,
+        phonenum: this.data.phonenum,
+        address: this.data.address
+      },
+      success: res => {
+        console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+        this.setData({
+          reg_name: '',
+          reg_phonenum: '',
+          reg_address: '',
+          reg_id: '',
+        })
+
+
+
+      },
+      fail: err => {
+        console.error('[数据库] [新增记录] 失败：', err)
+      }
+    })
+    var a = this.data.IsAdd;
+    a = (a + 1) % 2;
+
+    this.setData({
+      IsAdd: a
+    })}
+
 })
