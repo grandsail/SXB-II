@@ -31,14 +31,12 @@
 
 
 <view class="recAddr"><text>收件地址</text></view>
-
- 
+<!--无常用收件地址时-->
  <block wx:if="{{canUseAddr.length===0||more===1}}">
-
- <view class='addLoc' bindtap="addAddr">创建地址</view>
+<view class='addLoc' bindtap="addAddr">创建地址</view>
 </block>
 
-
+<!--新增-->
 <block wx:if="{{IsAdd==1&&IsEdit!=1}}">
   <view class="form_item">
     <text class='form_text'>姓名</text>
@@ -58,12 +56,11 @@
 </block>
 
 
-
+<!--更多地址的展开与收起-->
  <block wx:for="{{canUseAddr}}"  wx:for-index="index" >
 <block wx:if="{{more==0&&index==0&&select==0}}">
     <view class='locItemSelect'   bindtap='addrSelect' id="{{index}}" > 
-    
-        <view class='name'>{{item.name}}</view>
+    <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
         <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
@@ -76,22 +73,16 @@
    
    
 
- 
- 
- <block wx:for="{{canUseAddr}}"  wx:for-index="index" >
-
-  <block wx:if="{{more==1}}" >
+<block wx:for="{{canUseAddr}}"  wx:for-index="index" >
+<block wx:if="{{more==1}}" >
 <view class='locItemSelect' bindtap='addrSelect' id="{{index}}" data-id='{{item._id}}' > 
        <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
         <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
         </view>
-  
-   </block>
-   
- 
-   </block>
+ </block>
+  </block>
 
 
 
@@ -99,8 +90,7 @@
 <block wx:for="{{canUseAddr}}"  wx:for-index="index"  >
 <block wx:if="{{select==1&&index==clickId&&more==0}}">
    <view class='locItemSelect'   bindtap='addrSelect'  > 
-    
-        <view class='name'>{{item.name}}</view>
+ <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
         <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
@@ -111,13 +101,11 @@
 </block>
 
 
-<view class="form_blank">
-</view>
-
 
 
 <view class="form_blank">
 </view>
+<!--编辑-->
 <block wx:if="{{IsEdit==1&&IsAdd!==1}}">
   <view class="form_item">
     <text class='form_text'>姓名</text>
@@ -136,7 +124,7 @@
   <view class='button' bindtap="cancel" >返回</view>
 </block>
 
-
+<!--确认提交订单-->
 <view >
 <button bindtap="confirmSub" >确认</button>
 </view>
