@@ -1,5 +1,11 @@
 //app.js
 App({
+
+  globalData: {
+    adc:1,
+    order: ''
+  },    
+
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -10,6 +16,6 @@ App({
       })
     }
 
-    this.globalData = {}
+   
   }
 })

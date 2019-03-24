@@ -65,7 +65,7 @@ page{
   height: 10%;
   padding-top: 2%;
   padding-left: 3%; 
-  color: #c0871c;
+
 }
 
 .phonenum{
@@ -73,14 +73,14 @@ page{
   height: 10%;
   padding-top: 5%;
   padding-left: 3%; 
-  color: #c0871c;
+ 
 }
 
 .address{
   height: 10%;
   padding-top: 5%;
   padding-left: 3%; 
-  color: #c0871c;
+
 }
 
 
@@ -91,25 +91,16 @@ page{
   width: 7%;
   height: 22%;
   float: right;
+  margin-bottom: 10%;
 }
 
 .locItemSelect{
-  width: 80%;
+  width:100%;
   height: 16%;
-  background-color:#fff2cc;
-  border-radius: 5%;
+  background-color:#e7e6e6;
+  
   margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.locItemUnselect{
-  width: 80%;
-  height: 16%;
-  background-color:#ddd;
-  border-radius: 5%;
-  margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
+ 
 }
 
 
@@ -184,8 +175,15 @@ border-radius: 5%;
   color: rgb(97, 91, 91);
   float:right;
   margin-right: 10%;
-  margin-top:3%;
+  
  font-weight: 600;
   font-size: 88%;
-  margin-bottom: -8%;
+
+}
+.addLoc{
+    width:100%;
+  height: 16%;
+  background-color:#e7e6e6;
+  
+  margin-top: 3%;
 }

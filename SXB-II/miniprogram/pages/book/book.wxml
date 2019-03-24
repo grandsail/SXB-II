@@ -1,3 +1,4 @@
+
 <!--输入单号-->
 <view class="postNumInput">
         <text >单号:</text>
@@ -88,9 +89,4 @@
 <view >
 <button bindtap="confirmSub" >确认</button>
 </view>
-
-
-
-
-
 
