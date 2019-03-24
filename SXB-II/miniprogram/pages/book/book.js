@@ -262,15 +262,6 @@ Page({
     })
   },
   //跳转至更多
-  toReceivingLoc: function () {
-    wx.navigateTo({
-      url: '../receivingloc/receivingloc',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-
-  },
   moreRecLoc: function () {
     var b = this.data.more;
     b = (b + 1) % 2;
