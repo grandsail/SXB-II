@@ -1,15 +1,12 @@
 {
 
     "pages": [
-
-
     "pages/frontpage/frontpage",
     "pages/center/center",
     "pages/book/book",
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",
     "pages/editrevloc/editrevloc",
-    "pages/book/book",
     "pages/index/index",
     "pages/detail/detail",
     "pages/history/history",
