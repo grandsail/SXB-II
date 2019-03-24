@@ -15,6 +15,7 @@ Page({
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters
     db.collection('Orders').where({
+
       _openid: this.data.openid
     }).get({
       success: res => {

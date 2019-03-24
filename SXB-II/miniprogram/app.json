@@ -1,5 +1,4 @@
 {
-  
     "pages": [
     "pages/frontpage/frontpage",
     "pages/center/center",
@@ -7,11 +6,11 @@
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",
     "pages/editrevloc/editrevloc",
-    "pages/history/history",
     "pages/index/index",
-    "pages/detail/detail"
-    ],
-
+    "pages/detail/detail",
+    "pages/history/history",
+    "pages/change/change"
+  ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -20,7 +19,6 @@
     "navigationBarTitleText": "SXB-II"
     
   },
-  
   "tabBar": {
     "color": "rgb(143, 127, 94)",
     "selectedColor": "#000",
@@ -38,5 +36,6 @@
       "selectedIconPath": "images/center1.png"
     }
   ]
+
   }
 }

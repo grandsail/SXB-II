@@ -1,25 +1,28 @@
+
 <!--输入单号-->
 <view class="postNumInput">
         <text >单号:</text>
-     <input class="userNumInput" type="number" placeholder="请输入快递单号 " placeholder-class="placeholder_style" name="data_num" value="{{data_num}}" focus="{{focus}}" bindinput='confirm' bindblur='userNumInput'/>
+     <input type="number" placeholder="请输入快递单号 " placeholder-class="placeholder_style" name="data_num" value="{{data_num}}" focus="{{focus}}" bindinput='confirm' bindblur='userNumInput'/>
    </view>
 
 <!--选择时间-->
  <view class="recTimeSelect">
-      <text class="Text" >取件时间:</text>
-   
-      <picker class='Picker1' mode="date" value="{{date}}" start="2018-11-14" end="2019-11-14" bindchange="bindDateChange" >
-            <view style='color: darkgray'>
-              {{date}}
+        <text >取件时间:</text>
+        <view class="dateSelect">
+        <picker mode="date" value="{{date}}" start="2018-11-14" end="2019-11-14" bindchange="bindDateChange" >
+                    <view>
+                        {{date}}
+                    </view>
+                </picker>
             </view>
-      </picker>
-           
-      <picker class='Picker2' mode="time" value="{{time}}" start="01:00" end="24:00" bindchange="bindTimeChange" >
-             <view style='color:darkgray'>
-               {{time}}
-             </view>
-      </picker>
-  
+
+      <view class="timeSelect">
+      <picker mode="time" value="{{time}}" start="01:00" end="24:00" bindchange="bindTimeChange" >
+                    <view>
+                        {{time}}
+                    </view>
+                </picker>
+            </view>
        
 </view>
 
@@ -86,9 +89,4 @@
 <view >
 <button bindtap="confirmSub" >确认</button>
 </view>
-
-
-
-
-
 
