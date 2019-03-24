@@ -7,8 +7,9 @@
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",
     "pages/editrevloc/editrevloc",
-    
-    "pages/index/index"
+    "pages/history/history",
+    "pages/index/index",
+    "pages/detail/detail"
     ],
 
   "window": {
