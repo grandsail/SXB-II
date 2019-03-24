@@ -1,5 +1,5 @@
 {
-  
+
     "pages": [
       "pages/center/center",
     "pages/frontpage/frontpage",
@@ -9,8 +9,7 @@
     "pages/editrevloc/editrevloc",
     
     "pages/index/index"
-    ],
-
+  ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -19,7 +18,6 @@
     "navigationBarTitleText": "SXB-II"
     
   },
-  
   "tabBar": {
     "color": "rgb(143, 127, 94)",
     "selectedColor": "#000",
@@ -37,5 +35,6 @@
       "selectedIconPath": "images/center1.png"
     }
   ]
+
   }
 }
