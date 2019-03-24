@@ -192,33 +192,14 @@ Page({
       IsEdit: a
     })
     const db = wx.cloud.database()
-    this.setData({
-      reg_id: e.currentTarget.dataset.id
-    })
-    //查询用户点击条目的信息
-    const LocSearch = wx.cloud.database()
-    LocSearch.collection('ReceivingLoc').where({
-      _id: this.data.reg_id
-    }).get({
-      success: res => {
-        this.setData({
-          Info: res.data,
-        })
-        console.log('词条地址信息查询成功: ', res)
-        if (this.data.canUseAddr !== ''){
-          this.setData({
-            //记录查询结果，供placeholder使用
-            reg_name: this.data.Info[0].name,
-            reg_phonenum: this.data.Info[0].phonenum,
-            reg_address: this.data.Info[0].address,
-          })
-        }
-        //console.log(this.data.reg_name)
-      },
-      fail: err => {
-        console.error('词条地址信息查询失败：', err)
-      }
-    })
+    if (this.data.canUseAddr !== '')
+      this.setData({
+        reg_name: this.data.canUseAddr[this.data.clickId].name,
+        reg_address: this.data.canUseAddr[this.data.clickId].address,
+        reg_phonenum: this.data.canUseAddr[this.data.clickId].phonenum,
+        reg_id: this.data.canUseAddr[this.data.clickId]._id
+      })
+
   },
   //保存编辑
   saveEdit: function (e) {
