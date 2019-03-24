@@ -1,4 +1,14 @@
+var app = getApp();
 Page({
+onLoad: function (options) {
+    this.setData({
+      a: app.globalData.adc,
+    })
+  },
+data:
+{
+  a: app.globalData.adc
+},
 
 //点击头像跳转至userinfo页面
 changeToUserinfo: function () {
@@ -9,6 +19,9 @@ changeToUserinfo: function () {
 
 //点击“常用收件地点”跳转至receivingloc页面
 changeToReceivingloc: function() {
+  app.globalData.adc = 2
+  console.log(app.globalData.adc)
+  
   wx.navigateTo({
     url: '../receivingloc/receivingloc'
   })

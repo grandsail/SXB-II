@@ -1,8 +1,8 @@
 {
   
     "pages": [
-      "pages/center/center",
     "pages/frontpage/frontpage",
+    "pages/center/center",
     "pages/book/book",
     "pages/receivingloc/receivingloc",
     "pages/addrevloc/addrevloc",

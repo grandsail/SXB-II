@@ -107,7 +107,7 @@ Page({
           back: res.result,
         })
         console.log('调用云函数成功: ', res)
-        db.collection('orders').add({
+        db.collection('Orders').add({
           data: {
             date: this.data.date,
             time: this.data.time,

@@ -16,7 +16,7 @@
  
     <view class='first'  bindtap='changeToReceivingloc'>
      <image src="../source/adress.png" class='fonctionPicture1' ></image>  
-     <text style='font-size:110%;margin-top:3%;'>收件地址       ></text>
+     <text style='font-size:110%;margin-top:3%;'>收件地址{{a}}       ></text>
    </view>
   
   
