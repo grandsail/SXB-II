@@ -1,10 +1,8 @@
-
 <!--输入单号-->
 <view class="postNumInput">
         <text >单号:</text>
-     <input type="number" placeholder="请输入快递单号 " placeholder-class="placeholder_style" name="data_num" value="{{data_num}}" focus="{{focus}}" bindinput='confirm' bindblur='userNumInput'/>
+     <input value='{{postnum}}' type="number" placeholder=" 请输入快递单号"  name="data_num"  bindinput='confirm' bindblur='userNumInput'/>
    </view>
-
 <!--选择时间-->
  <view class="recTimeSelect">
         <text >取件时间:</text>
@@ -15,7 +13,6 @@
                     </view>
                 </picker>
             </view>
-
       <view class="timeSelect">
       <picker mode="time" value="{{time}}" start="01:00" end="24:00" bindchange="bindTimeChange" >
                     <view>
@@ -23,16 +20,10 @@
                     </view>
                 </picker>
             </view>
-       
 </view>
-
-
-
 <!--收件地址-->
-
 <view class="recAddr"><text>收件地址</text></view>
  <block wx:for="{{canUseAddr}}"  wx:for-index="index" >
-
   <block wx:if="{{index==clickId}}" >
 <view class='locItemSelect' bindtap='addrSelect' id="{{index}}" data-id='{{item._id}}' > 
        <view class='name'>{{item.name}}</view>
@@ -40,13 +31,10 @@
         <view class='address'>地址：{{item.address}}</view>
         <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
         </view>
-  
    </block>
-
 <block wx:else>
 <block wx:if="{{index<3}}">
     <view class='locItemUnselect'   bindtap='addrSelect' id="{{index}}" > 
-    
         <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
@@ -54,15 +42,13 @@
    </view></block>
   </block>
 </block>
+
 <view wx:if="{{index==0}}" bindtap='addRecievingLoc' class='add' >
     <image class='add_image' src='../source/plus_receivingloc.png'></image>
 </view>
-
 <view class="more" bindtap='toReceivingLoc'>更多地址</view>
-
 <view class="form_blank">
 </view>
-
 <block wx:if="{{IsEdit==1||IsAdd==1}}">
   <view class="form_item">
     <text class='form_text'>姓名</text>
@@ -80,13 +66,9 @@
   <view wx:if="{{IsEdit==1}}"class='button' bindtap="saveEdit" >确定</view>
   <view class='button' bindtap="cancel" >返回</view>
 </block>
-
-
 <view class="form_blank">
 </view>
-
-
 <view >
-<button bindtap="confirmSub" >确认</button>
+<button bindtap="comfirm" >确认</button>
 </view>
 

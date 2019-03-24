@@ -1,0 +1,22 @@
+<!--miniprogram/pages/test/test.wxml-->
+<view class="background">
+  <!--加个详细信息的按钮-->
+  <block wx:for="{{queryResult}}" >
+    <view class='into'>
+      <view class='allStyle' data-id='{{item._id}}' bindtap='detail' >
+          <view class='style'> 
+            <view  class='top' >快递号为：  </view>
+            <text class='follow'>{{item.postnum}} </text>
+            </view>
+          <view class='style'> 
+            <view class='top'>货箱：</view>
+            <text class='follow'>{{item.box}}号柜{{item.car}}号车 </text>
+          </view>
+          <view class='style'> 
+            <view class='top'> 送达时间：</view>
+            <text class='follow'>{{item.date}} {{item.time}}</text>
+          </view> 
+      </view>
+    </view>
+  </block>
+</view>

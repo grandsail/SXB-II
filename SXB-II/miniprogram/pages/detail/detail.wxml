@@ -1,0 +1,35 @@
+<!--miniprogram/pages/test/test.wxml-->
+<view class="background">
+  <block wx:for="{{queryResult}}" >
+    <view>
+      <view class='allStyle' >
+          <view class='style' > 
+            <view  class='top' >单号：  </view>
+            <text class='follow'>{{item.postnum}} </text>
+          </view>
+          <view class='style'> 
+            <view class='top'>取件时间： </view>
+            <text class='follow'>{{item.date}} {{item.time}}</text>
+          </view>
+          <view class='style'> 
+            <view class='top'>货箱：</view>
+            <text class='follow'>{{item.box}}号柜{{item.car}}号车 </text>
+             </view>
+           <view class='style'> 
+            <view class='top'> 电话： </view>
+            <text class='follow'>{{item.phonenum}}</text>
+          </view>
+          <view class='style'> 
+            <view class='top'> 姓名：  </view>
+            <text class='follow'>{{item.name}}</text>
+          </view>
+          <view class='style'> 
+            <view class='top'> 地址：  </view>
+            <text class='follow'> {{item.address}}</text>
+          </view>
+      </view>
+    </view>
+    <button class='buttonStyle' bindtap='onUpdate'>更改</button>
+    <button class='buttonStyle' bindtap='onRemove'>删除</button>
+  </block>
+</view>

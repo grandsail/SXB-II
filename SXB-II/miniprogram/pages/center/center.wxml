@@ -3,7 +3,7 @@
   
  
      <!-- 头像-->
-     <view class='picture'  >
+     <view class='picture'>
        <open-data  type="userAvatarUrl" ></open-data>
      </view>
      <!-- 昵称--> 
