@@ -1,6 +1,8 @@
 // miniprogram/pages/test/test.js
 Page({
-
+  onLoad: function (options) {
+    this.onQuery()
+  },
   data: {
     focus: false,
     inputValue: '',
@@ -12,7 +14,8 @@ Page({
   onQuery: function () {
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters
-    db.collection('orders').where({
+    db.collection('Orders').where({
+
       _openid: this.data.openid
     }).get({
       success: res => {
