@@ -20,8 +20,10 @@
     
   },
   "tabBar": {
-    "color": "rgb(143, 127, 94)",
+    "color": "black",
     "selectedColor": "#000",
+   "backgroundColor":"#545454",
+
   "list": [
     {
       "pagePath": "pages/frontpage/frontpage",

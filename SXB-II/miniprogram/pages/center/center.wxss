@@ -1,14 +1,26 @@
 page{
  background-color:  white;
  height:100%;
+ 
 }
 .userinfo{
+  
+
  font-size:120%;
- background-color: black;
- height: 30%;
+ height: 35%;
+ overflow: hidden;
+}
+.bg{
+  width: 100%;
+  height:100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+
 }
 .picture{
-height: 70%;
+  margin-top: 5%;
+height: 60%;
  margin-left:35%;
  
  background-color: #F6F6F6;
@@ -29,7 +41,7 @@ height: 70%;
   display: flex;
   height: 9%;
   margin-top: 5%;
-  background-color:  #F6F6F6;
+  background-color:  rgba(246, 246, 246, 0.192);
   
 }
 
@@ -37,7 +49,7 @@ height: 70%;
  display: flex;
   height: 9%;
   margin-top: 3%;
-  background-color:  #F6F6F6;
+  background-color:  rgba(246, 246, 246, 0.192);
 
   
 }
@@ -59,14 +71,14 @@ height: 70%;
  display: flex;
   height: 9%;
   margin-top: 3%;
-  background-color:  #F6F6F6;
+  background-color:  rgba(246, 246, 246, 0.192);
 
   
 }
 .fonctionPicture3{
-   margin-right:40%;
+   margin-right:42%;
   height: 65%;
-  width: 13%;
-  margin-left:5%;
+  width: 10%;
+  margin-left:7%;
   padding-top: 2%;
 }

@@ -1,16 +1,18 @@
 <!-- 我的快件页面 卢轶轩已完成-->
-<view class='mainPage'>
+ <view class='plus'  bindtap='changeToIndex'>
+       <image style = 'width:44%; height:100%;                margin-left:28%'src='../source/plus.jpg'></image>
+      </view>
   <block wx:for="{{queryResult}}"  >
     <view style='height:22%; padding:2% 2% 1% 2%;'bindlongpress="deleteclass"  data-id="{{item._id}}">
       <view class='order' bindlongpress="deleteclass"  data-id="{{item._id}}" >
         <view style='height:74%;width:100%;display:flex;flex-direction: row;border-radius: 5%;'>
           <view class='halfwidthbox'>
               <view class='halfheightbox.text'>快递号:
-              <text style=' color:  #c0871c;margin-left:3%;'> {{item.postnum}}</text>
+              <text style=' color:  rgba(246, 246, 246, 0.918);margin-left:3%;'> {{item.postnum}}</text>
               </view>
 
               <view wx:if="{{item.state != 3}}" class='halfheightbox.text'>货箱：
-               <text style=' color:  #c0871c;margin-left:3%;'>{{item.car}}{{a}}号车{{item.box}}号柜</text>  
+               <text style=' color: rgba(246, 246, 246, 0.918);margin-left:3%;'>{{item.car}}{{a}}号车{{item.box}}号柜</text>  
               </view>
             <view wx:else class='halfheightbox.text'>请预约收件时间地点</view>
           </view>
@@ -24,16 +26,14 @@
           </view>
         </view>
         <view wx:if="{{item.state != 3}}" style='height:26%;width:100%'>预计送达日期:
-          <text style=' color:  #c0871c;margin-left:3%;'>  {{item.date}} 时间:{{item.time}} </text>  
+          <text style=' color: rgba(246, 246, 246, 0.918);margin-left:3%;'>  {{item.date}} 时间:{{item.time}} </text>  
         </view>
         <!-- <text>快递号:\n\n几号柜几号车:\n\n预计送达时间:几年几月几日xx:xx</text> -->
       </view>
     </view>
+   
   </block>
-    <view style='height:24%; padding:2% 2% 1% 2%;' bindtap='changeToIndex'>
-      <view class='order'>
-        <image style = 'width:44%; height:100%; margin-left:28%'src='../source/plus.jpg'></image>
-      </view>
-    </view>
-    <view style='height:10%'></view>
-</view>
+    
+   
+   
+
