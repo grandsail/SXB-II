@@ -6,7 +6,14 @@ page {
   justify-content: flex-start;
 
 }
+.bg{
+  width: 100%;
+  height:100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
 
+}
 .order{
   height: 25%;
   background-color:rgba(246, 246, 246, 0.192);

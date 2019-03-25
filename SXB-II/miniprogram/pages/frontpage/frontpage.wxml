@@ -1,4 +1,5 @@
 <!-- 我的快件页面 卢轶轩已完成-->
+ <image class='bg' src="../source/bg.png" mode="aspectFill"></image>
  <view class='plus'  bindtap='changeToIndex'>
        <image style = 'width:44%; height:100%;                margin-left:28%'src='../source/plus.jpg'></image>
       </view>
