@@ -1,6 +1,6 @@
-
 <!--顶部装饰部分-->
 <view class="content"> 收件地址 
+
 </view>
 <image class='background' src="../source/paper.png" mode="aspectFill"></image>
 <view style='height:12%;'></view>
@@ -37,4 +37,9 @@
   </view>
 </block>
 <!--添加收件地址-->
-<view class='addrevloc' bindtap='AddRevLoc'>添加收件地址</view>
+<view class='addrevloc' bindtap='AddRevLoc'>
+
+ <image class='plus1'  src="../source/plus1.png"></image>
+ <text class='text'>添加收件地址</text>
+ 
+</view>

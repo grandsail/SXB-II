@@ -1,4 +1,3 @@
-
 page {
 background-color:#F6F6F6;
 justify-content: flex-start;
@@ -25,7 +24,7 @@ position:fixed;
 .DefaultLocItem{
 
  width:100%;
-height: 18%;
+height: auto;
 border-bottom-style: dotted ;
 border-bottom-color: white;
 display: flex;
@@ -35,7 +34,7 @@ flex-direction: row;
 
 .LocItem{
  width:100%;
-height: 18%;
+height: auto;
 border-bottom-style: dotted ;
 border-bottom-color: white;
 
@@ -45,13 +44,13 @@ flex-direction: row;
 }
 
 .info{
-  width: 60%;
+  width: 95%;
   height: 20%;
   margin-bottom: 4%;
   padding-left: 5%; 
 }
 .logodefault{
-  height: 70%;
+  height: 80px;
   width: 75%;
   float: right;
   margin-left: 30%;
@@ -68,7 +67,7 @@ flex-direction: row;
   margin-top: 90%;
 }
 .edit_image{
-height: 75%;
+height: 30px;
 width: 55%;
 }
 .edit_image1{
@@ -96,16 +95,25 @@ margin-top:50%;
 
 .addrevloc{
   position: fixed;
-  height: 5%;
+  height: 10%;
   width: 40%;
-  background-color:white;
-  bottom: 5%;
-  
-  margin-left: 30%;
-  margin-right: 30%;
-  padding: 2%;
-  border-radius: 5%;
+  background-color:rgba(128, 128, 128, 0.479);
+margin-left: 30%;
+  color: white;
   display: flex;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+ bottom: 0%;
+  flex-direction: column;
+
+}
+.plus1{
+  margin-left: 40%;
+  height: 60%;
+  width: 20%;
   justify-content: center;
   align-content: center;
+}
+.text{
+  margin-left:16%;
 }
