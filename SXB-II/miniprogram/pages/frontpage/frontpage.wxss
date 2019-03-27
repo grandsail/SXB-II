@@ -4,7 +4,7 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
+  width: 100%;
 }
 .bg{
   width: 100%;
@@ -14,59 +14,62 @@ page {
   z-index: -1;
 
 }
-.order{
-  height: 25%;
-  background-color:rgba(246, 246, 246, 0.192);
-  width: 100%;
-  border-radius: 5%;
-
-}
-.halfheightbox{
-  height: 70%;
-  width: 100%;
-}
-.halfheightbox.text{
-  display: flex;
-  align-items: center;
-}
-.halfheightbox.state{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.halfheightbox.state.yes{
-  height: 30%;
-  width:40%;
-  background-color: #e7b75d52;
-  border-radius: 5%;
-  margin-bottom: 3%;
-  margin-left: 55%;
-  margin-top: 3%;
-  font-size: 50%;
-}
-.halfheightbox.state.no{
-  height: 30%;
-  width: 40%;
-  background-color: #ad979371;
-  border-radius: 5%;
-  margin-bottom: 3%;
-  margin-left: 55%;
-  margin-top: 3%
-}
-.halfwidthbox{
-  height: 100%;
-  width: 70%;
-}
-.item.postnum{
-  margin-top: 3%;
-  margin-bottom: 3%;
-  color:  #ffffff98;
-}
 .plus{
+  margin-top: 3%;
   height: 30px;
-  width: 100%;
- 
-
+  border-radius: 5%;
+  display:flex; 
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 75%;
   
 }
+.plus1{
+  height: 120rpx;
+  width: 20%;
+  margin-left: 40%;
+}
+.order{
+  background-color:rgba(0, 0, 0, 0.116);
+  width: 100%;
+  border-radius: 5%;
+  margin-top:3%;
+}
 
+.holeBox{
+  display: flex;
+  flex-direction: row;
+  margin:3%; 
+}
+.ltefBox{
+  width: 90%;
+}
+.leftText{
+  color: #d2d5da; 
+  font-size: 80%;
+}
+.stateText{
+
+  width: 100%;
+  color: white;
+  font-size: 120%;
+  margin-left:5%;
+}
+.rightBox{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  text-align: center;
+  font-size: 90%;
+  border-radius: 3%;
+  color: white;
+}
+.rightBoxYes{
+  
+  background-color: rgba(0, 255, 55, 0.349);
+}
+.rightBoxNo{
+  
+  background-color: rgba(255, 8, 0, 0.349)
+}

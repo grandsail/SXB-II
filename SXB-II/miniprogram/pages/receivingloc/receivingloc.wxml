@@ -1,7 +1,6 @@
 <!--顶部装饰部分-->
-<view class="content"> 收件地址 
-
-</view>
+<view class="content"> 收件地址 </view>
+ <image class='bg' src="../source/recBg.png" mode="aspectFill"></image>
 <image class='background' src="../source/paper.png" mode="aspectFill"></image>
 <view style='height:12%;'></view>
 <!--默认收件地址部分-->

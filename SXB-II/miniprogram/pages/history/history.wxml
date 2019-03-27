@@ -1,4 +1,5 @@
 <!--miniprogram/pages/test/test.wxml-->
+ <image class='bg' src="../source/recBg.png" mode="aspectFill"></image>
 <view class="background">
   <!--加个详细信息的按钮-->
   <block wx:for="{{queryResult}}" >

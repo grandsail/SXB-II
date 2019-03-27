@@ -14,7 +14,7 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#84929b",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "SXB-II"
     
@@ -22,7 +22,7 @@
   "tabBar": {
     "color": "black",
     "selectedColor": "#000",
-   "backgroundColor":"#545454",
+   "backgroundColor":"#1f3d53",
 
   "list": [
     {
