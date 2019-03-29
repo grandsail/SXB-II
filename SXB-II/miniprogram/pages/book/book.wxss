@@ -2,188 +2,116 @@ page{
  background-color:  white;
  height:100%;
 }
+.bg{
+  width: 100%;
+  height:100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
 
-.postNumInput{
+}
+.postInput{
   display: flex;
   flex-direction: row;
-  margin-left: 8%;
-  font-size: 140%;
-  font-weight: 800;
-  color: #000;
-  text-align:center;
-  margin-top: 14%;
-}
-
-.userNumInput{
-  border:1px solid #ddd;
-  border-radius:8rpx;
   margin-left: 5%;
-  font-weight: 300;
-  font-family:'微软雅黑';
-  font-size: 85%;
-  color:darkgray;
+  font-size: 100%;
+  color: #f6f6f6;
+  text-align:center;
+ padding-top: 10%;
+}
+.inputBox1{
+  background-color: #f6f6f6;
+  color: #000000;
+  border:1px solid #f6f6f6;
+  margin-left: 5%;
   
 }
-
-
-
-
-
-.recTimeSelect{
-  display: flex;
-  flex-direction: row;
-  margin-top: 5%;
-}
-
-.Text{
-  margin-left: 4%;
-  font-size: 140%;
-  font-weight: 800;
-  color: #000;
-}
-
-.Picker1{
-  text-align:center;
-  width: 30%;
-  border:1rpx solid #ddd;
-  border-radius:8rpx;
-  background-color: white;
-  margin-left:3%; 
-}
-.Picker2{
-  text-align:center;
-  width: 20%;
-  border:1rpx solid #ddd;
-  border-radius:8rpx;
-  background-color: white;
-  margin-left:5%; 
-}
-
-
-.name{
-  width: 30%;
-  height: 10%;
-  padding-top: 2%;
-  padding-left: 3%; 
-
-}
-
-.phonenum{
-  width: 50%;
-  height: 10%;
-  padding-top: 5%;
-  padding-left: 3%; 
- 
-}
-
-.address{
-  height: 10%;
-  padding-top: 5%;
-  padding-left: 3%; 
-
-}
-
-
-.edit_image{
-  padding-right: 3%;
-  bottom: 2%;
-  right: 3%;
-  width: 7%;
-  height: 22%;
-  float: right;
-  margin-bottom: 10%;
-}
-
-.locItemSelect{
-  width:100%;
-  height: 16%;
-  background-color:#e7e6e6;
+.inputBox2{
+  background-color: #f6f6f6;
+  color: #747474;
+  border:1px solid #f6f6f6;
+  margin-left: 5%;
   
-  margin-top: 3%;
- 
 }
-
-
-
-.recAddr text{
-font-size: 88%;
-width: 100%;
+.background {
 margin-top: 10%;
+width: 100%;
+height:1%;
+background-size:100% 100%;
+background-color: #b9bec4;
+}
+.recAddr{
+font-size: 88%;
+height: 6%;
+width: 100%;
 display: flex;
 justify-content: center;
 font-weight: 600;
-margin-bottom: 5%;
-}
+color: white;
 
-
-.add_image{
-  padding-right: 3%;
-  margin-left: 25%;
-  padding-top: 3%;
-  padding-left: 12%; 
-  width: 27%;
-  height: 80%;
 }
-.add{
-  width: 80%;
-  height: 16%;
-  background-color:#e7e6e6;
-  border-radius: 5%;
-  margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
+.plus1{
+  height: 60%;
+  width: 15%;
+  margin: auto;
 }
-
-.form_blank{
-  margin:14%;
+.addLoc{
+  display: flex;
+  flex-direction: column;
+  color: #f6f6f6;
+  text-align: center;
+  width: 100%;
+  font-size: 60%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.116);
 }
-
+.addBox{
+  background-color: rgba(0, 0, 0, 0.116);
+}
 .form_item{
   display: flex;
   flex-direction: row;
-  justify-content: center; 
-  align-items: center;
-  height: 10%;
-  margin-top: 3%;
-
+  margin-bottom: 3%;
 }
-
 .form_text{
-  width: 20%;
+  color: #f6f6f6;
+  margin-left: 4%;
 }
-
 .form_input{
+  background-color: #f6f6f6;
+  color: #000000;
+  border:1px solid #f6f6f6;
+  margin-left: 5%;
   width: 70%;
-  border:1px solid #ddd;
 }
-
+.buttonItem{
+  display: flex;
+  flex-direction: row;
+}
 .button{
-width: 40%;
-height: 8%;
-background-color:beige;
-display: flex;
-justify-content: center; 
-align-items: center;
-margin-top: 5%;
-margin-left: 30%;
-border-radius: 5%;
+  border: solid 1% #f6f6f6 ;
+  border-radius:8%; 
+  width: 27%;
+  text-align: center;
+  height: 7%;
+  background-color: #f6f6f6;
+  color: white;
+  margin: auto;
 }
-.recTimeSelect{
-  margin-bottom:24%;
+.showAddr{
+  width:100%;
+  height: auto;
+ border-bottom-style: dotted ;
+ border-bottom-color: white;
+ display: flex;
+ flex-direction: row;
 }
-.more{
-  color: rgb(97, 91, 91);
-  float:right;
-  margin-right: 10%;
-  
- font-weight: 600;
-  font-size: 88%;
-
+.leftBox{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
-.addLoc{
-    width:100%;
-  height: 16%;
-  background-color:#e7e6e6;
-  
-  margin-top: 3%;
+.edit_image{
+height: 30px;
+width: 55%;
 }

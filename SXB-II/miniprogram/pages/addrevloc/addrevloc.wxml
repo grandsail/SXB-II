@@ -1,4 +1,5 @@
-<text class='title'>添加收件地址</text>
+<image class='bg' src="../source/recBg.png" mode="aspectFill"></image>
+
 <view class="form_item">
   <text class='form_text'>姓名:</text>
   <input class="form_input" type="text" bindblur='UserNameInput'/>
