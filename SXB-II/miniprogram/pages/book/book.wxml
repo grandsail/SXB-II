@@ -65,9 +65,9 @@
     <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
-        <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
+       
    </view></block>
- <block wx:if="{{more==0&&index==0&&select==0}}" >
+ <block wx:if="{{more==0&&index==0&&IsEdit==0&&select!=1}}" >
 <view class="more" bindtap='moreRecLoc'>更多地址</view>
 </block>
  
@@ -95,9 +95,11 @@
  <view class='name'>{{item.name}}</view>
         <view class='phonenum'>{{item.phonenum}}</view>
         <view class='address'>地址：{{item.address}}</view>
-        <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
+      
    </view>
-   <view class="more" bindtap='moreRecLoc'>更多地址</view>
+   <block wx:if="{{more==0&&IsEdit==0}}" >
+<view class="more" bindtap='moreRecLoc'>更多地址</view>
+</block>
    </block>
  
 </block>
