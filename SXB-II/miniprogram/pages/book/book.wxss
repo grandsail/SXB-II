@@ -64,9 +64,12 @@ color: white;
   font-size: 60%;
   height: 10%;
   background-color: rgba(0, 0, 0, 0.116);
+  border-bottom-style: dotted ;
+ border-bottom-color: white;
 }
 .addBox{
   background-color: rgba(0, 0, 0, 0.116);
+
 }
 .form_item{
   display: flex;
@@ -87,6 +90,7 @@ color: white;
 .buttonItem{
   display: flex;
   flex-direction: row;
+  margin: 3%;
 }
 .button{
   border: solid 1% #f6f6f6 ;
@@ -95,7 +99,7 @@ color: white;
   text-align: center;
   height: 7%;
   background-color: #f6f6f6;
-  color: white;
+  color: rgb(94, 94, 94);
   margin: auto;
 }
 .showAddr{
@@ -105,13 +109,39 @@ color: white;
  border-bottom-color: white;
  display: flex;
  flex-direction: row;
+ color: white;
+ background-color: rgba(0, 0, 0, 0.116);
 }
 .leftBox{
   display: flex;
   flex-direction: column;
   width: 70%;
+  margin: 3%;
+}
+.rightBbox{
+  width:25%;
 }
 .edit_image{
 height: 30px;
 width: 55%;
+margin-top: 40%;
+margin-left: 15%;
+}
+.more{
+  width:22%;
+  margin: 3%;
+  background-color: #f6f6f6;
+  color: rgb(94, 94, 94);
+  font-size: 80%;
+  text-align: center;
+}
+.buttonYes{
+  width: 60%;
+  margin-left: 20%;
+  height: 6%;
+  color: rgb(94, 94, 94);
+  background-color: #f6f6f6;
+  text-align: center;
+  font-size: 130%;
+  font-weight: 200%;
 }

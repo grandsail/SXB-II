@@ -148,18 +148,20 @@
 
 <block wx:if="{{more==1}}" >
 
-<view class='showAddr' bindtap='addrSelect' id="{{index}}" data-id='{{item._id}}' > 
-
-       <view class='name'>{{item.name}}</view>
+ <view class='showAddr'   bindtap='addrSelect' id="{{index}}" > 
+    
+    <view class='leftBox'>
+        <view class='name'>{{item.name}}</view>
 
         <view class='phonenum'>{{item.phonenum}}</view>
 
         <view class='address'>地址：{{item.address}}</view>
-
-        <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr' data-id='{{item._id}}' ></image>
-
-        </view>
-
+    </view>
+    
+    <view class='rightBbox'>
+        <image class='edit_image' src='../source/pencil.png'  bindtap='editAddr' data-id='{{item._id}}' ></image>
+    </view>
+   </view>
  </block>
 
   </block>
@@ -176,16 +178,20 @@
 
 <block wx:if="{{select==1&&index==clickId&&more==0}}">
 
-   <view class='showAddr'   bindtap='addrSelect'  > 
-
- <view class='name'>{{item.name}}</view>
+  <view class='showAddr'   bindtap='addrSelect' id="{{index}}" > 
+    
+    <view class='leftBox'>
+        <view class='name'>{{item.name}}</view>
 
         <view class='phonenum'>{{item.phonenum}}</view>
 
         <view class='address'>地址：{{item.address}}</view>
-
-        <image class='edit_image' src='../source/edit_receivingloc.png'  bindtap='editAddr'></image>
-
+    </view>
+    
+    <view class='rightBbox'>
+        <image class='edit_image' src='../source/pencil.png'  bindtap='editAddr' data-id='{{item._id}}' ></image>
+    </view>
+  
    </view>
 
    <view class="more" bindtap='moreRecLoc'>更多地址</view>
@@ -237,13 +243,13 @@
    <input class="form_input" type="text" placeholder="{{reg_address}}" bindblur='userAddressInput'/>
 
   </view>
-
+<view class='buttonItem'>
   <view wx:if="{{IsAdd==1}}"class='button' bindtap="saveAdd">确定</view>
 
   <view wx:if="{{IsEdit==1}}"class='button' bindtap="saveEdit" >确定</view>
 
   <view class='button' bindtap="cancel" >返回</view>
-
+</view>
 </block>
 
 
@@ -252,9 +258,8 @@
 
 
 
-<view >
+<view class='buttonYes' bindtap="confirmSub" >
 
-  <button bindtap="confirmSub" >确认</button>
-
+  确认
 </view>
 

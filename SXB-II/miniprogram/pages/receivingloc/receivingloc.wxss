@@ -10,7 +10,7 @@ height:7%;
 width: 100%;
 background-color: #b9bec4;
 padding-top: 3%;
-
+color: white;
 }
 .bg{
   width: 100%;
@@ -44,7 +44,7 @@ flex-direction: row;
  width:100%;
 height: auto;
 border-bottom-style: dotted ;
-border-bottom-color: white;
+border-bottom-color: #F6F6F6;
 
 display: flex;
 flex-direction: row;
@@ -87,6 +87,7 @@ margin-top:50%;
 .leftbox{
   width: 75%;
   margin-left: 5%;
+  color: white;
 }
 
 .rightbox{
